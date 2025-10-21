@@ -1,4 +1,4 @@
-# 🧠 Control de Horno mediante Programación Genética (DEAP)
+# Control de Horno mediante Programación Genética (DEAP)
 
 Este proyecto implementa un **controlador evolutivo** usando **Programación Genética (PG)** con la librería [DEAP](https://deap.readthedocs.io/en/master/).  
 El objetivo es que el algoritmo encuentre **automáticamente la expresión matemática (ley de control)** que minimice el error de temperatura en un horno con la siguiente dinámica:
@@ -16,7 +16,7 @@ donde:
 
 ---
 
-## 🚀 Objetivo
+## Objetivo
 
 Evolucionar una función \( P = f(error, error\_prev, P\_prev, T) \) que controle el horno y minimice el **error promedio** con respecto a una referencia de temperatura \( T_{ref} \).
 
@@ -24,7 +24,7 @@ El algoritmo busca automáticamente expresiones matemáticas que actúen como co
 
 ---
 
-## 🧩 Características principales
+## Características principales
 
 - Implementación basada en **DEAP** y **gp.PrimitiveTree**
 - Entradas del controlador: `error`, `error_prev`, `P_prev`, `T`
@@ -35,7 +35,7 @@ El algoritmo busca automáticamente expresiones matemáticas que actúen como co
 
 ---
 
-## 📁 Estructura
+## Estructura
 
 ```
 ├── control_horno_gp.py     # Código principal
@@ -45,7 +45,7 @@ El algoritmo busca automáticamente expresiones matemáticas que actúen como co
 
 ---
 
-## ⚙️ Requisitos
+## Requisitos
 
 Instala las dependencias necesarias ejecutando:
 
@@ -55,7 +55,7 @@ pip install deap matplotlib numpy
 
 ---
 
-## ▶️ Ejecución
+## Ejecución
 
 Ejecuta el archivo principal:
 
@@ -76,7 +76,7 @@ gen nevals min avg
 Y al final:
 
 ```
-🏆 Mejor controlador evolutivo encontrado:
+ Mejor controlador evolutivo encontrado:
 (add (mul 1.27 error) (mul 0.43 error_prev))
 Aptitud (error promedio): 2.134
 ```
@@ -87,7 +87,7 @@ Esto representa una **ley de control evolutiva** similar a un controlador PI:
 
 ---
 
-## 📊 Resultados
+## Resultados
 
 Se generan dos gráficos:
 1. **Temperatura vs tiempo** (en azul) con la referencia deseada (en rojo).
@@ -95,11 +95,12 @@ Se generan dos gráficos:
 
 Ejemplo:
 
-![example](https://i.imgur.com/Yh4gV7n.png)
+<img width="989" height="490" alt="image" src="https://github.com/user-attachments/assets/0bada654-0bab-428c-b2d0-bf911e3ea556" />
+
 
 ---
 
-## 🧠 Conceptos clave
+##  Conceptos clave
 
 | Término | Descripción |
 |----------|--------------|
@@ -110,7 +111,7 @@ Ejemplo:
 
 ---
 
-## 🔧 Parámetros del algoritmo
+##  Parámetros del algoritmo
 
 | Parámetro | Valor | Descripción |
 |------------|--------|-------------|
@@ -124,7 +125,7 @@ Puedes ajustar estos valores para explorar el desempeño del algoritmo.
 
 ---
 
-## 📚 Referencias
+## Referencias
 
 - Martínez, J. J. *Programación Genética – Conceptos Básicos* (UNAL, 2025)
 - Koza, J. (1992). *Genetic Programming: On the Programming of Computers by Means of Natural Selection.* MIT Press.
@@ -132,10 +133,10 @@ Puedes ajustar estos valores para explorar el desempeño del algoritmo.
 
 ---
 
-## 🧾 Licencia
+##  Licencia
 
 Este proyecto es de libre uso educativo. Creado con fines didácticos para demostrar la aplicación de **Programación Genética** en **control de sistemas dinámicos**.
 
 ---
 
-✨ *Desarrollado con Python 3 y DEAP – Ejemplo de IA Evolutiva aplicada al Control de Procesos.*
+ *Desarrollado con Python 3 y DEAP – Ejemplo de IA Evolutiva aplicada al Control de Procesos.*
