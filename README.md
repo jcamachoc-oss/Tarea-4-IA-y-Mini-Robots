@@ -1,4 +1,11 @@
-# Control de Horno mediante Programación Genética (DEAP)
+# Control de Horno mediante Programación Genética Guia 4 (DEAP)
+
+**Autores**:  
+- Juan Diego Camacho  
+- Sebastián Triana
+
+---
+
 
 Este proyecto implementa un **controlador evolutivo** usando **Programación Genética (PG)** con la librería [DEAP](https://deap.readthedocs.io/en/master/).  
 El objetivo es que el algoritmo encuentre **automáticamente la expresión matemática (ley de control)** que minimice el error de temperatura en un horno con la siguiente dinámica:
@@ -81,9 +88,10 @@ Y al final:
 Aptitud (error promedio): 2.134
 ```
 
-Esto representa una **ley de control evolutiva** similar a un controlador PI:
+Esto representa una **ley de control evolutiva** que depende de constantes aleatorias y operaiones basicas.
 
-\[ P = 1.27 \cdot error + 0.43 \cdot error_{prev} \]
+protectedDiv(add(add(protectedDiv(0.569154763367533, 0.1), 0.31750623321647076), add(add(add(1.368634286491224, sub(neg(0.1), protectedDiv(error_prev, error_prev))), 0.1), add(add(protectedDiv(sin(add(add(add(add(1.368634286491224, sub(tanh(0.31750623321647076), protectedDiv(error_prev, error_prev))), sin(cos(0.45890430507420943))), add(mul(0.0832464601443157, add(tanh(P_prev), 0.1)), 0.9032427136420501)), error)), T), error), 0.9032427136420501))), 0.0832464601443157)
+Aptitud (error promedio): 24.8689
 
 ---
 
